@@ -8,7 +8,7 @@ from django.utils import timezone
 
 class Skill(models.Model):
     name = models.CharField(max_length=50)
-    date = models.DateTimeField(timezone.now())
+    date = models.DateTimeField(default=timezone.now())
 
 
     def __str__(self):
