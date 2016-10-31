@@ -8,10 +8,8 @@ class Skill(models.Model):
     name = models.CharField(max_length=50)
     date = models.DateTimeField(default=timezone.now())
 
-
     def __str__(self):
         return self.name
-
 
 
 class User(models.Model):
