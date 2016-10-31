@@ -1,5 +1,12 @@
 
 {% block body %}
   <h1>{{ user.name }}'s Skills</h1>
-  <h2>{{ user.user_skills }}</h2>
+  {% if user.user_skills.all %}
+    <ul>
+      {% for skill in user.user_skills.all %}
+        <li>{{ skill.name }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
 {% endblock %}
